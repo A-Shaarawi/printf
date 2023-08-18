@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+#include "functions.c"
 #include <stdarg.h>
 
 /**
@@ -22,6 +23,12 @@ int _printf(const char *format, ...)
 		if (format && format[i] == '%')
 		{
 			if (format[i + 1] == 'c')
+			{
+			}
+			if (format[i + 1] == 's')
+			{
+			}
+			if (format[i + 1] == '%')
 			{
 			}
 		}
