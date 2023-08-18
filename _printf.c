@@ -16,12 +16,15 @@ int _printf(const char *format, ...)
 	char printed[];
 
 	va_start(args, format);
-
-	if (format && format[i] == %)
+	
+	for (;format[i] != '\0'; i++)
 	{
-		while (format[i])
-			{
-				;
-			}
+		if (format && format[i] == %)
+		{
+			while (format[i])
+				{
+					;
+				}
+		}
 	}
 }
