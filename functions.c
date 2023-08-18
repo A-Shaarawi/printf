@@ -1,12 +1,12 @@
 #include "main.h"
-
+#include <stdarg.h>
 /***/
 
 char print_char(va_list)
 {
-	char c;
+	char c = va_arg(args, int);
 
-	while ()
-		if ()
-	return ()
+	//while ()
+		//if ()
+	return (c);
 }
