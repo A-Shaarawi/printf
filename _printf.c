@@ -21,10 +21,9 @@ int _printf(const char *format, ...)
 	{
 		if (format && format[i] == '%')
 		{
-			while (format[i])
-				{
-					;
-				}
+			if (format[i + 1] == 'c')
+			{
+			}
 		}
 	}
 }
