@@ -4,9 +4,10 @@
 
 char print_char(va_list)
 {
-	char c = va_arg(args, int);
+	//char c = va_arg(args, int);
 
-	//while ()
-		//if ()
+	int v
+	while ((v = va_arg(args, int))
+		if ()
 	return (c);
 }
