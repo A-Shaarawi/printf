@@ -2,8 +2,8 @@
 
 /**
  * print_char - returns char given in argument
- * @va_list: pointer to the list of arguments of _printf variadic function
- * Return: the character to be printed
+ * @va_list: pointer to _printf variable arguments
+ * Return: the character
 */
 char print_char(va_list args)
 {
@@ -13,9 +13,9 @@ char print_char(va_list args)
 }
 
 /**
- * print_string - return string given in argument
- * @va_list: pointer to the list of arguments of _printf variadic function
- * Return: the string to be printed
+ * print_string - returns string given in argument
+ * @va_list: pointer to _printf variable arguments
+ * Return: the string
 */
 char *print_str(va_list args)
 {
@@ -24,13 +24,21 @@ char *print_str(va_list args)
 	return (str);
 }
 
-/***/
+/**
+ * print_num_d - returns int given in argument in base 10
+ * @va_list: pointer to _printf variable arguments
+ * Return: the decimal number
+*/
 int print_num_d(va_list args)
 {
 	return ();
 }
 
-/***/
+/**
+ * print_num_i - returns int given in argument in base 10
+ * @va_list: pointer to _printf variable arguments
+ * Return: the decimal number
+*/
 long print_num_i(va_list args)
 {
 	char *str;
