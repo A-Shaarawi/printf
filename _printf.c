@@ -1,8 +1,7 @@
 #include "main.h"
 #include "functions.c"
 
-/**
- */
+/***/
 int _printf(const char *format, ...)
 {
 	int i = 0, j = 0;
@@ -10,7 +9,7 @@ int _printf(const char *format, ...)
 	char printed[];
 
 	va_start(args, format);
-	for (;format[i] != '\0'; i++)
+	for (; format[i] != '\0'; i++)
 	{
 		if (format && format[i] == '%')
 		{
