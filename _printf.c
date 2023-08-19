@@ -1,12 +1,16 @@
 #include "main.h"
 #include "functions.c"
+#include <unistd.h>
+#include <stdarg.h>
 
 /***/
 int _printf(const char *format, ...)
 {
-	int i = 0, j = 0;
+	int i = 0;
+
 	va_list args;
-	char printed[];
+	
+	int fd = STDOUT_FILENO;
 
 	va_start(args, format);
 	for (; format[i] != '\0'; i++)
@@ -15,6 +19,8 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == 'c')
 			{
+				char y = print_char(args);
+				write(fd, &y, 1);
 			}
 			if (format[i + 1] == 's')
 			{
@@ -24,4 +30,6 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
+	va_end(args);
+	return (0);
 }
