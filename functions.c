@@ -23,3 +23,20 @@ char *print_str(va_list args)
 
 	return (str);
 }
+
+/***/
+int print_num_d(va_list args)
+{
+	return ();
+}
+
+/***/
+long print_num_i(va_list args)
+{
+	char *str;
+	int base, i = 0, num = va_arg(va_list, int);
+
+	sprintf(str, "%d", num);
+	str[i] == 0 ? (str[i + 1] == 'x' || str[i + 1] = 'X' ? base = 16 : base = 2) : base = 10;
+	return (strtol(str, NULL, base));
+}
