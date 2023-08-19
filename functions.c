@@ -8,6 +8,7 @@
 char print_char(va_list)
 {
 	char c = va_arg(va_list, int);
+
 	return (c);
 }
 
@@ -19,5 +20,6 @@ char print_char(va_list)
 char *print_str(va_list)
 {
 	char *str = va_arg(va_list, char *);
-	return(str);
+
+	return (str);
 }
