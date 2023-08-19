@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+#include <stdarg.h>
 /*
  * _printf - fucntion that prints
  * @format: parameter
@@ -11,7 +13,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	
 	va_start(args, format);
-	for (i = 0; format[i] != NULL; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
