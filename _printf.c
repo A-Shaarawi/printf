@@ -12,6 +12,14 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	for (; format[i] != '\0'; i++)
 	{
+		if (format[i] == ' ')
+		{
+			putchar(32);
+		}
+		if (format[i] == '\n')
+		{
+			putchar(10);
+		}
 		if (format && format[i] == '%')
 		{
 			if (format[i + 1] == 'c')
@@ -19,12 +27,12 @@ int _printf(const char *format, ...)
 				char y = print_char(args);
 				write(fd, &y, 1);
 			}
-			if (format[i + 1] == 's')
+			/*if (format[i + 1] == 's')
 			{
 			}
 			if (format[i + 1] == '%')
 			{
-			}
+			}*/
 		}
 	}
 	va_end(args);
