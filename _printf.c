@@ -1,38 +1,39 @@
 #include "main.h"
-#include "functions.c"
-/***/
+/*
+ * _printf - fucntion that prints
+ * @format: parameter
+ * Return: 0
+ */
 int _printf(const char *format, ...)
 {
 	int i = 0;
 
 	va_list args;
 	
-	int fd = STDOUT_FILENO;
-
 	va_start(args, format);
-	for (; format[i] != '\0'; i++)
+	for (i = 0; format[i] != NULL; i++)
 	{
-		if (format[i] == ' ')
-		{
-			putchar(32);
-		}
-		if (format[i] == '\n')
-		{
-			putchar(10);
-		}
-		if (format && format[i] == '%')
+		if (format[i] == '%')
 		{
 			if (format[i + 1] == 'c')
 			{
-				char y = print_char(args);
-				write(fd, &y, 1);
+				char c = va_arg(args, int);
+				write(fd, &c, 1);
 			}
-			/*if (format[i + 1] == 's')
+			else if (format[i + 1] == 's')
 			{
+				char *str = va_arg(args, char *);
+				write(fd,str,strlen(str));
 			}
-			if (format[i + 1] == '%')
+			else if (format[i + 1] == '%')
 			{
-			}*/
+				write(1,"%%",1);
+			}
+			i++;
+		}
+		else if (format[i] != '%')
+		{
+			write(fd,&format[i],1);
 		}
 	}
 	va_end(args);
