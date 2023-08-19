@@ -6,5 +6,7 @@
 #include <stdarg.h>
 
 int _printf(const char *format, ...);
+char print_char(va_list);
+char *print_str(va_list);
 
 #endif
