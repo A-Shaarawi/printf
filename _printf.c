@@ -1,8 +1,5 @@
 #include "main.h"
 #include "functions.c"
-#include <unistd.h>
-#include <stdarg.h>
-
 /***/
 int _printf(const char *format, ...)
 {
