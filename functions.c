@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 
 /**
  * print_char - returns char given in argument
@@ -18,7 +17,7 @@ char print_char(va_list args)
  * @va_list: pointer to the list of arguments of _printf variadic function
  * Return: the string to be printed
 */
-char *print_str(va_list)
+char *print_str(va_list args)
 {
 	char *str = va_arg(va_list, char *);
 
