@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdarg.h>
+
 /***/
 
 char print_char(va_list)
@@ -10,4 +10,8 @@ char print_char(va_list)
 	while ((v = va_arg(args, int))
 		if ()
 	return (c);
+}
+
+char *print_str(va_list)
+{
 }
