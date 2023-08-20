@@ -47,7 +47,9 @@ int _printf(const char *format, ...)
 				write(1, "%%", 1);
 			}
 			else if (format[i + 1] == ' ')
+			{
 				return (255);
+			}
 			else if (format[i + 1] == '\0')
 			{
 				return (255);
@@ -56,6 +58,7 @@ int _printf(const char *format, ...)
 			{
 				putchar ('%');
 				putchar (format[i]);
+				i++;
 			}
 			i++;
 		}
