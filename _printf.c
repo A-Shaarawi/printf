@@ -39,6 +39,7 @@ int _printf(const char *format, ...)
 				else
 				{
 					write(fd, str, _strlen(str));
+					return (i - 1);
 				}
 			else if (format[i + 1] == '%')
 			{
@@ -46,11 +47,11 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i + 1] == ' ' || format[i + 1] == '\0')
 			{
-				return (-1);
+				return (255);
 			}
 			else
 			{
-				return (-1);
+				return (255);
 			}
 			i++;
 		}
