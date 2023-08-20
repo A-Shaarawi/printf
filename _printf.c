@@ -39,10 +39,7 @@ int _printf(const char *format, ...)
 				}
 			}
 			else if (format[i + 1] == '%')
-			{
-				write(1, "%%", 1);
-				j++;
-			}
+				write(1, "%%", 1), j++;
 			else
 			{
 				return (255);
@@ -50,10 +47,7 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		else if (format[i] != '%')
-		{
-			j++;
-			write(fd, &(format[i]), 1);
-		}
+			write(fd, &(format[i]), 1), j++;
 	}
 	va_end(args);
 	return (j);
