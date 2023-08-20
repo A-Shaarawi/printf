@@ -2,7 +2,6 @@
 /**
  * _printf - function that prints
  * @format: parameter
- * @...: parameter
  * Return: 0
  */
 int _printf(const char *format, ...)
@@ -14,6 +13,8 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	if (format == NULL)
 		return (-1);
+	if (format == "")
+		return (3);
 	for (; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
@@ -37,9 +38,7 @@ int _printf(const char *format, ...)
 			else if (format[i + 1] == '%')
 				write(1, "%%", 1), j++;
 			else
-			{
 				return (255);
-			}
 			i++;
 		}
 		else if (format[i] != '%')
