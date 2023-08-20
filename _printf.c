@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == 'c')
 			{
 				c = va_arg(args, int);
-				c ? write(fd, &c, 1) : write(1, "(null)", 6), return (6);
+				write(fd, &c, 1);
 			}
 			else if (format[i + 1] == 's')
 			{
