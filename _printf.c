@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0, y;
 	char *str, c;
 	va_list args;
 
@@ -17,6 +17,14 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == ' ')
+                        {
+                            for (y = i + 1; format[y] == ' ' ;y++)
+                            {
+                                i++;
+                                continue;
+                            }
+                        }
 			if (format[i + 1] == 'c')
 			{
 				c = (char)va_arg(args, int);
