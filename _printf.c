@@ -23,18 +23,22 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == 'c')
 			{
 				char c = va_arg(args, int);
-
 				write(fd, &c, 1);
 			}
 			else if (format[i + 1] == 's')
 			{
 				char *str = va_arg(args, char *);
-
 				write(fd, str, strlen(str));
 			}
 			else if (format[i + 1] == '%')
 			{
 				write(1, "%%", 1);
+			}
+			// if (format[i] == '%' && (format[i + 1] != 'c' and 's' and '%' => THEN print the char format[i + 1]))
+			else
+			{
+				char ch = va_arg(args, int);
+				write(fd, &ch, 1);
 			}
 			i++;
 		}
