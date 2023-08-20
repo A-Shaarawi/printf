@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == 'c')
 			{
 				c = (char)va_arg(args, int);
-				write(fd, &c, 1), j++;
+				write(fd, &c, 1), j++, i++;
 			}
 			else if (format[i + 1] == 's')
 			{
@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 					return (6);
 				}
 				else
-				write(fd, str, _strlen(str)), j += _strlen(str);
+				write(fd, str, _strlen(str)), j += _strlen(str), i++;
 			}
 			else if (format[i + 1] == '%')
 				write(1, "%%", 1), j++, i++;
