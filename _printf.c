@@ -32,18 +32,13 @@ int _printf(const char *format, ...)
 					return (6);
 				}
 				else
-				{
-				write(fd, str, _strlen(str));
-				j += _strlen(str);
-				}
+				write(fd, str, _strlen(str)), j += _strlen(str);
 			}
 			else if (format[i + 1] == '%')
 				write(1, "%%", 1), j++;
-			else
-			{
-				return (255);
-			}
 			i++;
+			else
+				return (255);
 		}
 		else if (format[i] != '%')
 			write(fd, &(format[i]), 1), j++;
