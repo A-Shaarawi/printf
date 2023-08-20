@@ -35,10 +35,9 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i + 1] == '%')
 				write(1, "%%", 1), j++, i++;
-			else if (format[i + 1] != 's' ||format[i + 1] != 'c' || format[i + 1] != '%')
-			{
+			else if (format[i + 1] != 's' || format[i + 1] == 'c' ||
+					format[i + 1] != '%')
 				write(fd, &(format[i]), 1), j++;
-			}
 			else
 				return (255);
 		}
