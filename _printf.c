@@ -1,7 +1,6 @@
 #include "main.h"
 #include <string.h>
 #include <stdarg.h>
-#include "more_func.c"
 /**
  * _printf - function that prints
  *
