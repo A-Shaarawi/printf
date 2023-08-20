@@ -26,9 +26,7 @@ int _printf(const char *format, ...)
 			{
 				str = va_arg(args, char *);
 				if (str == NULL)
-				{
 					write(1, "(null)", 6), i++, j += 6;
-				}
 				else
 				write(fd, str, _strlen(str)), j += _strlen(str), i++;
 			}
