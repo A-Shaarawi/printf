@@ -1,6 +1,4 @@
 #include "main.h"
-#include <string.h>
-#include <stdarg.h>
 /**
  * _printf - function that prints
  *
@@ -12,9 +10,7 @@
 int _printf(const char *format, ...)
 {
 	int i = 0;
-
 	char *str, c;
-
 	va_list args;
 
 	va_start(args, format);
@@ -60,5 +56,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(args);
-	return (i);
+	return (i - 1);
 }
