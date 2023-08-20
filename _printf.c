@@ -34,12 +34,6 @@ int _printf(const char *format, ...)
 			{
 				write(1, "%%", 1);
 			}
-			// if (format[i] == '%' && (format[i + 1] != 'c' and 's' and '%' => THEN print the char format[i + 1]))
-			//else
-			//{
-			//	char ch = va_arg(args, int);
-			//	write(fd, &ch, 1);
-			//}
 			i++;
 		}
 		else if (format[i] != '%')
