@@ -17,6 +17,15 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == ' ')
+			{
+				write(1,"%%",1);
+				for (y = i + 1; format[y] == ' ' ;y++)
+				{
+					i++;
+					continue;
+				}
+			}
 			if (format[i + 1] == 'c')
 			{
 				c = (char)va_arg(args, int);
@@ -35,8 +44,6 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i + 1] == '%')
 				write(1, "%%", 1), j++, i++;
-			else if (format[i + 1] == '\0')
-				return (225);
 			else if (format[i + 1] != 's' || format[i + 1] == 'c' ||
 					format[i + 1] != '%')
 				write(fd, &(format[i]), 1), j++;
