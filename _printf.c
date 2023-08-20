@@ -1,6 +1,7 @@
 #include "main.h"
 #include <string.h>
 #include <stdarg.h>
+#include "more_func.c"
 /**
  * _printf - function that prints
  *
@@ -38,7 +39,7 @@ int _printf(const char *format, ...)
 					return (6);
 				}
 				else
-				write(fd, str, strlen(str));
+				write(fd, str, _strlen(str));
 			}
 			else if (format[i + 1] == '%')
 			{
