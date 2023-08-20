@@ -36,7 +36,8 @@ int _printf(const char *format, ...)
 				if (str == NULL)
 				{
 					write(1, "(null)", 6);
-					return (6);
+					i++;
+					j += 6;
 				}
 				else
 				write(fd, str, _strlen(str)), j += _strlen(str), i++;
