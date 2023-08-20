@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			else if (format[i + 1] == 's')
 			{
 				str = va_arg(args, char *);
-				write(fd, str, strlen(str));
+				str ? write(fd, str, strlen(str)) : write(1, "(null)", 6), return (6);
 			}
 			else if (format[i + 1] == '%')
 			{
