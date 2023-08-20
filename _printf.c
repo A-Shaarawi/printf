@@ -1,21 +1,14 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
 /**
  * _printf - function that prints
- *
  * @format: parameter
  * @...: parameter
  * Return: 0
  */
-
 int _printf(const char *format, ...)
 {
 	int i = 0, j = 0;
-
 	char *str, c;
-
 	va_list args;
 
 	va_start(args, format);
@@ -49,10 +42,6 @@ int _printf(const char *format, ...)
 			{
 				write(1, "%%", 1);
 				j++;
-			}
-			else if (format[i + 1] == ' ' || format[i + 1] == '\0')
-			{
-				return (255);
 			}
 			else
 			{
