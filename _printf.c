@@ -50,6 +50,10 @@ int _printf(const char *format, ...)
 			{
 				return (255);
 			}
+			else
+			{
+				return (-1);
+			}
 			i++;
 		}
 		else if (format[i] != '%')
