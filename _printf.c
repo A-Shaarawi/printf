@@ -13,8 +13,6 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	if (format == NULL)
 		return (-1);
-	else if (format[0] == '\0')
-		return (3);
 	for (; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
@@ -37,13 +35,6 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i + 1] == '%')
 				write(1, "%%", 1), j++, i++;
-			else if (format[i + 1] != 's' || format[i+1] != 'c' || format[i+1] != '%')
-			{
-				if (format[i + 2] == '\0')
-					return(225);
-				else
-					write(fd, &(format[i]), 1), i++, j++;
-			}
 			else
 				return (255);
 		}
