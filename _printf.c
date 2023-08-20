@@ -34,7 +34,9 @@ int _printf(const char *format, ...)
 					return (6);
 				}
 				else
+				{
 					write(fd, str, _strlen(str));
+				}
 			else if (format[i + 1] == '%')
 			{
 				write(1, "%%", 1);
