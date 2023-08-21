@@ -1,5 +1,4 @@
 #include "main.h"
-#include "more_func.c"
 /**
  * _printf - function that prints
  * @format: parameter
@@ -34,7 +33,6 @@ int _printf(const char *format, ...)
                         else if (format[i + 1] == 'd')
                         {
                                 i++;
-                                char *str;
                                 int num = va_arg(args, int);
                                 str = _sprintf(num);
                                 write(1, str, _strlen(str));
