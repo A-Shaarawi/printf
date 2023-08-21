@@ -1,4 +1,5 @@
 #include "main.h"
+#include "more_func.c"
 /**
  * _printf - function that prints
  * @format: parameter
