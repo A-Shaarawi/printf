@@ -38,9 +38,9 @@ void print_num_d(va_list args)
 }
 
 /**
- * print_num_i - prints a decimal number
+ * print_num_i - prints a number in different bases
  * @va_list: pointer to _printf variable arguments
- * Return: decimal number
+ * Return: int number
 */
 void print_num_i(va_list args)
 {
