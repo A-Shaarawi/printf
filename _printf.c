@@ -30,6 +30,22 @@ int _printf(const char *format, ...)
 				else
 				write(fd, str, _strlen(str)), j += _strlen(str), i++;
 			}
+			else if (format[i + 1] == 'd')
+                        {
+                                i++;
+                                char *str;
+                                int num = va_arg(args, int);
+                                str = _sprintf(num);
+                                write(1, str, _strlen(str));
+                        }
+                        else if (format[i + 1] == 'i')
+                        {
+                                i++;
+                                char *str2;
+                                int num2 = va_arg(args, int);
+                                str2 = _sprintf(num2);
+                                write(1, str2, _strlen(str2));
+                        }
 			else if (format[i + 1] == '%')
 				write(1, "%%", 1), j++, i++;
 			else if (format[i + 1] == '\0')
