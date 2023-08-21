@@ -25,9 +25,9 @@ char *print_str(va_list args)
 }
 
 /**
- * print_num_d - returns int given in argument in base 10
+ * print_num_d - prints a decimal number
  * @va_list: pointer to _printf variable arguments
- * Return: the decimal number
+ * Return: decimal number
 */
 void print_num_d(va_list args)
 {
