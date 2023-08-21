@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
                                 write(1, "%%", 1), j++, i++;
                         else if (format[i + 1] == '\0')
                                 return (-1);
-                        else if (format[i + 1] != 's' || format[i + 1] == 'c' ||
+                        else if (format[i + 1] != 's' && format[i + 1] != 'c' &&
                                         format[i + 1] != '%')
                                 write(fd, &(format[i]), 1), j++;
                         else
