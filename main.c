@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * Return: 0 Always (successdhhgd)
+ * Return: 0 Always (succegd)
  */
 int main(void)
 {
