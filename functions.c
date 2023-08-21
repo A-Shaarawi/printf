@@ -44,8 +44,7 @@ void print_num_d(va_list args)
 */
 void print_num_i(va_list args)
 {
-	char str2[32];
-	char *str3;
+	char str2[32], char *str3;
 	int base, i = 0, num2 = va_arg(va_list, int);
 	int len2;
 	long tmp;
