@@ -36,16 +36,18 @@ int _printf(const char *format, ...)
 				int num = va_arg(args, int);
 				int len = sprintf(str, "%d", num);
 				write(1, str, len);
+				i++;
 			}
 			else if (format[i + 1] == 'i')
 			{
+				i++;
 				char str2[32];
 				char str3[32];
 				int base, i = 0, num2 = va_arg(args, int);
 				int len2;
 				long tmp;
 				sprintf(str3, "%d", num2);
-				str3[i] == 0 ? (str3[i + 1] == 'x' || str3[i + 1] == 'X' ? base = 16 : base = 2) : base = 10;
+				str3[i] == 0 ? (str3[i + 1] == 'x' || str3[i + 1] == 'X' ? base = 16 : base == 2) : base == 10;
 				tmp = strtol(str3, NULL, base);
 				len2 = sprintf(str2, "%ld", tmp);
 				write(1, str2, len2);
