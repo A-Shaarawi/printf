@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _printf - function that prints
  * @format: parameter
@@ -28,7 +29,7 @@ int _printf(const char *format, ...)
 				if (str == NULL)
 					write(1, "(null)", 6), i++, j += 6;
 				else
-				write(fd, str, _strlen(str)), j += _strlen(str), i++;
+				write(fd, str, strlen(str)), j += strlen(str), i++;
 			}
 			else if (format[i + 1] == '%')
 				write(1, "%%", 1), j++, i++;

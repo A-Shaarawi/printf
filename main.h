@@ -6,11 +6,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include "more_func.c"
+#include <string.h>
 
 #define fd STDOUT_FILENO
 
 int _printf(const char *format, ...);
-int _strlen(char *str);
 
 #endif
