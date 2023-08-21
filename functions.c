@@ -40,7 +40,7 @@ void print_num_d(va_list args)
 /**
  * print_num_i - returns int given in argument in base 10
  * @va_list: pointer to _printf variable arguments
- * Return: the decimal number
+ * Return: decimal number
 */
 void print_num_i(va_list args)
 {
