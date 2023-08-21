@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <math.h>
+#include "more_func.c"
 
 #define fd STDOUT_FILENO
 
