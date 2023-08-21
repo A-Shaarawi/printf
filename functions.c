@@ -38,7 +38,7 @@ void print_num_d(va_list args)
 }
 
 /**
- * print_num_i - returns int given in argument in base 10
+ * print_num_i - prints a decimal number
  * @va_list: pointer to _printf variable arguments
  * Return: decimal number
 */
