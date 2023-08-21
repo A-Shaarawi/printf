@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * print_char - returns char given in argument
  * @va_list: pointer to _printf variable arguments
