@@ -1,4 +1,5 @@
 #include "main.h"
+#include "more_func.c"
 /**
  * _printf - function that prints
  * @format: parameter
@@ -31,25 +32,21 @@ int _printf(const char *format, ...)
 				write(fd, str, _strlen(str)), j += _strlen(str), i++;
 			}
 			else if (format[i + 1] == 'd')
-			{
-				char str[32];
-				int num = va_arg(args, int);
-				int len = sprintf(str, "%d", num);
-				write(1, str, len);
-			}
-			else if (format[i + 1] == 'i')
-			{
-				char str2[32];
-				char str3[32];
-				int base, i = 0, num2 = va_arg(args, int);
-				int len2;
-				long tmp;
-				sprintf(str3, "%d", num2);
-				str3[i] == 0 ? (str3[i + 1] == 'x' || str3[i + 1] == 'X' ? base = 16 : base = 2) : base = 10;
-				tmp = strtol(str3, NULL, base);
-				len2 = sprintf(str2, "%ld", tmp);
-				write(1, str2, len2);
-			}
+                        {
+                                i++;
+                                char *str;
+                                int num = va_arg(args, int);
+                                str = _sprintf(num);
+                                write(1, str, _strlen(str));
+                        }
+                        else if (format[i + 1] == 'i')
+                        {
+                                i++;
+                                char *str2;
+                                int num2 = va_arg(args, int);
+                                str2 = _sprintf(num2);
+                                write(1, str2, _strlen(str2));
+                        }
 			else if (format[i + 1] == '%')
 				write(1, "%%", 1), j++, i++;
 			else if (format[i + 1] == '\0')

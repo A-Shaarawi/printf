@@ -7,9 +7,11 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <math.h>
+
 #define fd STDOUT_FILENO
 
-
+int count_num(int n);
+char *_sprintf(int num);
 int _printf(const char *format, ...);
 int _strlen(char *str);
 
