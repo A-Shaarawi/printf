@@ -29,9 +29,12 @@ char *print_str(va_list args)
  * @va_list: pointer to _printf variable arguments
  * Return: the decimal number
 */
-int print_num_d(va_list args)
+void print_num_d(va_list args)
 {
-	return ();
+	char *str;
+	int num = va_arg(va_list, int);
+	int len = sprintf(str, "%d", num);
+	write(1, str, len);
 }
 
 /**
@@ -39,12 +42,16 @@ int print_num_d(va_list args)
  * @va_list: pointer to _printf variable arguments
  * Return: the decimal number
 */
-long print_num_i(va_list args)
+void print_num_i(va_list args)
 {
-	char *str;
-	int base, i = 0, num = va_arg(va_list, int);
-
-	sprintf(str, "%d", num);
-	str[i] == 0 ? (str[i + 1] == 'x' || str[i + 1] = 'X' ? base = 16 : base = 2) : base = 10;
-	return (strtol(str, NULL, base));
+	char str2[32];
+	char *str3;
+	int base, i = 0, num2 = va_arg(va_list, int);
+	int len2;
+	long tmp;
+	sprintf(str3, "%d", num2);
+	str3[i] == 0 ? (str3[i + 1] == 'x' || str3[i + 1] = 'X' ? base = 16 : base = 2) : base = 10;
+	tmp = strtol(str3, NULL, base);
+	len2 = sprintf(str2, "%d", tmp;
+	write(1, str2, len2);
 }
